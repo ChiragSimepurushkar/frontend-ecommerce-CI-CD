@@ -7,10 +7,11 @@ import { IoRocketOutline } from "react-icons/io5";
 import CategoryPanel from './CategoryPanel';
 import "../Navigation/style.css"
 import { useEffect } from 'react';
-import { fetchDataFromApi } from '../../../../../admin/src/utils/api';
+
 import { useContext } from 'react';
 import { MyContext } from '../../../App';
 import MobileNav from './mobileNav';
+
 const Navigation = (props) => {
     const [isOpenCatPanel, setIsOpenCatPanel] = useState(false);
     const [catData, setCatData] = useState([]);

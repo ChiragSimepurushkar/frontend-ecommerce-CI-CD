@@ -211,11 +211,13 @@ useEffect(() => {
         <div className="Productitem flex-col lg:flex-row  shadow-lg rounded-md overflow-hidden border-1 border-[rgba(0,0,0,0.1)]">
             <div className="group imgWrapper w-full lg:w-[100%] overflow-hidden rounded-md relative">
                 <Link to={`/product/${props?.item?._id}`}>
-                    <div className="img  h-[250px] overflow-hidden ">
-                        <img src={props?.item?.images[0]}
-                            className='w-full' />
-                        <img src={props?.item?.images[1]}
-                            className='opacity-0 top-0 left-0 w-full absolute group-hover:opacity-100 transition-all duration-700 group-hover:scale-105' />
+                    <div className="img h-[250px] overflow-hidden relative group">
+                        <img src={props?.item?.images?.[0]}
+                            className='w-full h-full object-cover transition-all duration-700 group-hover:scale-105' alt={props?.item?.name} />
+                        {props?.item?.images?.[1] && (
+                            <img src={props?.item?.images?.[1]}
+                                className='opacity-0 absolute top-0 left-0 w-full h-full object-cover transition-all duration-700 group-hover:opacity-100 group-hover:scale-105' alt={props?.item?.name} />
+                        )}
                     </div>
                 </Link>
                 {
