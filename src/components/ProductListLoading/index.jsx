@@ -2,7 +2,7 @@ import React from "react";
 
 const ProductListLoading = () => {
   return (
-    <div className="flex flex-col gap-4 animate-pulse !pl-8 !mt-4 py-5 w-full">
+    <div className="w-full animate-pulse !pl-8 !mt-4 py-5 flex flex-col gap-4">
       {[...Array(5)].map((_, index) => (
         <div
           key={index}
